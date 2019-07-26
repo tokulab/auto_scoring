@@ -27,6 +27,10 @@ def exe(path, nest):
         # cファイルなら何もしない
         elif ".c" in name:
             print(cs.str_color("\t"*nest + "cファイルです\t" + path, "BLUE"))
+            print(cs.str_color("\t"*nest + "ソースコードを表示します", "BLUE"))
+            os.system('cat "' + path + '"')
+            print(cs.str_color("\t"*nest + "確認ができた場合は何かキーを入力してください", "YELLOW"))
+            input()
         # 9番の実行ファイルを実行する
         #elif "09" in name:
         elif name[-1] == "9":
