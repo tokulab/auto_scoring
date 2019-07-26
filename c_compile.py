@@ -35,7 +35,7 @@ if __name__ == "__main__":
 
     # 引数の数が間違っていた場合
     if len(args) != 2:
-        print(str_color("コマンドライン引数の数が間違っています！"), "RED")
+        print(str_color("コマンドライン引数の数が間違っています！", "RED"))
         print("\n使い方\n")
         print("python " + args[0] + " フォルダのパス ")
         sys.exit()
