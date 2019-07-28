@@ -23,6 +23,7 @@ def c_compile(path, nest):
         # cファイルならばコンパイル
         elif ".c" in path:
             print(cs.str_color("\t"*nest + "ファイルをコンパイルします\t" + path, "GREEN"))
+            #print(cs.str_color('gcc -o ' + '"' + path.strip('.c') + '" "' + path + '"', "YELLOW"))
             os.system('gcc -o ' + '"' + path.strip('.c') + '" "' + path + '"')
         # それ以外は何もしない
         else:
